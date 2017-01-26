@@ -36,6 +36,7 @@ public class Register extends AppCompatActivity {
     public void register(View view) {
         User user=new User(name.getText().toString(), password.getText().toString(), email.getText().toString());
         Log.d("TAG", user.getName());
+
         Call<ServerResponse> call = apiInterface.getRegistrationToken(user);
 
         call.enqueue(new Callback<ServerResponse>() {
@@ -48,6 +49,7 @@ public class Register extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ServerResponse> call, Throwable t) {
+
                 Toast.makeText(getApplicationContext(),"Error occurred", Toast.LENGTH_LONG).show();
 
             }
