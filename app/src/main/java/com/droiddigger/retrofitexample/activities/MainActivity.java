@@ -22,10 +22,8 @@ public class    MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private ApiInteface apiInterface;
-    private EditText userIdEditText;
+    private EditText emailEditText;
     private EditText passwordEditText;
-    private EditText jokeUserIdEditText;
-    private TextView jokeTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +63,15 @@ public class    MainActivity extends AppCompatActivity {
             getJokeFromServer(userId);
         }
 
+    }
+    
+    public void sign_in(View view){
+        String email=emailEditText.getText().toString();
+        String password=passwordEditText.getText().toString();
+    }
+    
+    public void register(View view){
+        startActivity(new Intent(MainActivity.this, Register.class));
     }
 
 
@@ -111,9 +118,7 @@ public class    MainActivity extends AppCompatActivity {
 
 
     private void viewInitialization() {
-        userIdEditText = (EditText) findViewById(R.id.login_id);
-        passwordEditText = (EditText) findViewById(R.id.login_password);
-        jokeUserIdEditText = (EditText) findViewById(R.id.user_id_for_joke);
-        jokeTextView = (TextView) findViewById(R.id.jokeTextView);
+        emailEditText = (EditText) findViewById(R.id.emailET);
+        passwordEditText = (EditText) findViewById(R.id.passwordET);
     }
 }
