@@ -1,5 +1,6 @@
 package com.droiddigger.retrofitexample.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,26 +43,26 @@ public class    MainActivity extends AppCompatActivity {
     // Login button event
     public void buttonClickEvent(View view){
 
-        if(view.getId()==R.id.login_button){
-            String userId;
-            String password;
-            User user = new User();
-
-            userId = userIdEditText.getText().toString();
-            password = passwordEditText.getText().toString();
-
-            user.setUserId(userId);
-            user.setPassword(password);
-
-            checkUserValidity(user);
-        }
-        else {
-            String userId;
-
-            userId = jokeUserIdEditText.getText().toString();
-
-            getJokeFromServer(userId);
-        }
+//        if(view.getId()==R.id.login_button){
+//            String userId;
+//            String password;
+//            User user = new User();
+//
+//            //userId = userIdEditText.getText().toString();
+//            password = passwordEditText.getText().toString();
+//
+//            //user.setUserId(userId);
+//            user.setPassword(password);
+//
+//            checkUserValidity(user);
+//        }
+//        else {
+//            String userId;
+//
+//            //userId = jokeUserIdEditText.getText().toString();
+//
+//            //getJokeFromServer(userId);
+//        }
 
     }
     
@@ -106,7 +107,7 @@ public class    MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
                 ServerResponse validity = response.body();
-                jokeTextView.setText(validity.getMessage());
+                //jokeTextView.setText(validity.getMessage());
             }
 
             @Override

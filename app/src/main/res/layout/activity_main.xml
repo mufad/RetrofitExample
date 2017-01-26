@@ -9,21 +9,22 @@
     
     <EditText
     android:layout_width="match_parent" 
-    android:layout_height="match_parent"
-    androidL:hint="Email"
+    android:layout_height="wrap_content"
+    android:hint="Email"
     android:layout_above="@+id/passwordET"
     android:id="@+id/emailET"/>
     
     <EditText
     android:layout_width="match_parent" 
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:hint="Password"
+        android:layout_centerVertical="true"
     android:layout_centerHorizontal="true"
     android:id="@+id/passwordET"/>
     
     <Button
     android:layout_width="match_parent" 
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:text="Sign In"
     android:onClick="sign_in"
     android:id="@+id/signInButton"
@@ -31,7 +32,7 @@
 
     <Button
     android:layout_width="match_parent" 
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:text="Register"
     android:onClick="register"
     android:id="@+id/registerButton"
