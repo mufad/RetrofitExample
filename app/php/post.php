@@ -20,7 +20,7 @@
       if($row=mysqli_fetch_assoc($result)){
             $response = array('status' => true, 'message' =>'QUERY SUCCESSFUL');
         }else{
-            $response = array('status' => true, 'message' => 'QUERY ERROR');
+            $response = array('status' => false, 'message' => 'QUERY ERROR');
         }
     
     echo json_encode($response);
