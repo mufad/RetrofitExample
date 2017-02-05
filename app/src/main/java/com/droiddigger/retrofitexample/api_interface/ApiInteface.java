@@ -18,4 +18,10 @@ public interface ApiInteface {
 
     @POST("/test/user.php")
     Call<ServerResponse>getUserName(@Body Customer customer);
+    
+    @POST("test/add_post.php")
+    Call<ServerResponse>addPost(@Body Post pos);
+    
+    @GET("test/post.php")
+    Call<ServerResponse>retrievePosts();
 }
